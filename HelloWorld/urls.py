@@ -15,7 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-# from new.views import HomeView
+# url与view开始对接
+from new.views import index,add,mainpage
+
 urlpatterns = [
+	path('',mainpage),
     path('admin/', admin.site.urls),
+    path('index/',index),
+    # name为设置别名
+    path('add/',add,name='add'),
 ]
