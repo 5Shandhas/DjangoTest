@@ -29,3 +29,5 @@ def mainpage(request):
 def index(request):
 	get_result=models.Article.objects.all()
 	return render(request, 'index.html',{'get_result':get_result})
+def index1(request):
+	return render(request,'index1.html')

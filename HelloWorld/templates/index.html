@@ -1,0 +1,6 @@
+<h2 align='center'>Welcome to my zone</h2>
+{% for nr in get_result %}
+    <h2>{{ nr.name }}</h2>
+    <p>{{ nr.timestamp }}</p>
+    <p>{{ nr.arti }}</p>
+{% endfor %}
