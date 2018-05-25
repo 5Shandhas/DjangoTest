@@ -30,9 +30,10 @@ def index(request):
 	get_result=models.Mao.objects.all()
 	return render(request, 'index.html',{'get_result':get_result})
 def index1(request):
+	get_result=models.Mao.objects.all()
 	context={
-		'title':'just a title',
-		'des':'just a description',
+		'title':get_result[10].name,
+		'des':get_result[10].arti[:10],
 		'score':'1.0',
 	}
 	return render(request,'index1.html',context)
