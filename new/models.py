@@ -26,3 +26,9 @@ class Article(models.Model):
 	timestamp=models.DateTimeField(default=datetime.now,verbose_name="添加时间")
 	def __str__(self):
 		return self.name
+
+class Mao(models.Model):
+	name=models.CharField(max_length=100,default=' ')
+	arti=models.TextField()
+	def __str__(self):
+		return self.name

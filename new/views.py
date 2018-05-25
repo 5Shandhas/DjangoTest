@@ -27,7 +27,7 @@ def mainpage(request):
 	return HttpResponse("<h1  align='center'>Welcome to the Mainpage</h1></br><a href='admin' align='center'>Admin</a></br><a href='index' align='center'>index</a>")
 # 文章列表
 def index(request):
-	get_result=models.Article.objects.all()
+	get_result=models.Mao.objects.all()
 	return render(request, 'index.html',{'get_result':get_result})
 def index1(request):
 	context={
